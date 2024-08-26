@@ -1,0 +1,9 @@
+void generate_random_data(Image* images, int count) {
+    srand(time(NULL));
+    for (int i = 0; i < count; i++) {
+        images[i].id = i + 1;
+        images[i].size = rand() % 1000000 + 1;  // Tamanho entre 1 e 1000000 bytes
+        sprintf(images[i].timestamp, "%d-%02d-%02d", 
+                2024, rand() % 12 + 1, rand() % 28 + 1);
+    }
+}
